@@ -1,0 +1,17 @@
+﻿{
+    "mcp":  {
+                "agentmemory":  {
+                                    "environment":  {
+                                                        "AGENTMEMORY_PROJECT":  "WebPro",
+                                                        "AGENTMEMORY_URL":  "http://localhost:3111"
+                                                    },
+                                    "command":  [
+                                                    "npx",
+                                                    "-y",
+                                                    "@agentmemory/mcp"
+                                                ],
+                                    "type":  "local",
+                                    "enabled":  true
+                                }
+            }
+}

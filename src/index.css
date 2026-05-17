@@ -1,10 +1,28 @@
 @import "tailwindcss";
 
-:root {
-  --color-cream: #faf7f2;
-  --color-charcoal: #1a1a1a;
-  --color-gold: #c9a84c;
-  --color-gold-light: #e8d5a3;
+/* ── Design System: monocromo, minimalista, gallery-like ──
+   Basado en design.md (inspirado en Artemii Lebedev). */
+@theme {
+  /* Paleta neutral — sin colores de marca */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-near-black: #020202;
+  --color-very-dark: #090909;
+  --color-mid-gray: #5e5e5e;
+  --color-light-gray: #a0a0a0;
+  --color-overlay: #efefef;
+
+  /* Tipografía: n-c / p-g no son públicas → Inter como sustituto del fallback */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+
+  /* Escala de espaciado base-4 (design.md §5) */
+  --spacing-2xl: 44px;
+  --spacing-3xl: 52px;
+  --spacing-4xl: 112px;
+  --spacing-5xl: 152px;
+  --spacing-6xl: 168px;
+  --spacing-7xl: 180px;
 }
 
 * {
@@ -18,10 +36,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, sans-serif;
-  background: var(--color-cream);
-  color: var(--color-charcoal);
+  font-family: var(--font-sans);
+  background: var(--color-black);
+  color: var(--color-white);
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0;
 }
 
 #root {
@@ -29,4 +48,14 @@ body {
   max-width: 100%;
   margin: 0;
   text-align: left;
+}
+
+/* Bordes rectos no negociables: 0px radius en todos los componentes */
+button,
+input,
+textarea,
+select,
+a,
+img {
+  border-radius: 0;
 }
