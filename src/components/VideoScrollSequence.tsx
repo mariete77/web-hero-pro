@@ -252,7 +252,7 @@ type Props = {
 }
 
 export default function VideoScrollSequence({
-  scrollHeightVh = 300,
+  scrollHeightVh = 500,
 }: Props) {
   const containerRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLCanvasElement>(null)
